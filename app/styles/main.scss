@@ -1,0 +1,123 @@
+//======================bootstrap====================================================
+// Core variables and mixins
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+// Reset and dependencies
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+//======================bootstrap====================================================
+img {
+    -webkit-touch-callout: none;
+}
+
+html.full-screen {
+    height: 100%;
+    body,
+    .stage {
+        height: 100%;
+    }
+}
+
+* {
+    user-select: false;
+}
+
+.stage {
+    position: relative;
+    max-width: 540px;
+    max-height: 960px;
+    margin: 0 auto;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.scenes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    &.active {
+        display: block;
+    }
+    .img-container {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        .eaves {
+          position: relative;
+          z-index: 30;
+        }
+        .lantern {
+            position: absolute;
+            z-index: 20;
+            bottom: -110px;
+            &.lantern-left {
+                left: 0px;
+            }
+            &.lantern-right {
+                right: 0px;
+            }
+        }
+    }
+    .door {
+        position: absolute;
+        background: url(../images/j01.jpg) no-repeat center top;
+        background-size: 100% auto;
+        width: 50%;
+        height: 100%;
+        top: 0px;
+        text-align: center;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        perspective: 500;
+        perspective-origin: 50% 50%;
+        transition: transform 1s;
+        .lock {
+            position: absolute;
+            width: 82px;
+            height: 126px;
+            background: url(../images/p06.png) no-repeat center center;
+            background-size: cover;
+            top: 50%;
+            margin-top: -63px;
+        }
+        .duilian {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -32.5px;
+            margin-top: -142px;
+        }
+        &.door-left {
+            background-image: url(../images/j01.jpg);
+            left: 0px;
+            box-shadow: inset -2px 0 2px 0 #310000;
+            z-index: 10;
+            transform-origin: 0% 50%;
+            .lock {
+                right: -41px;
+            }
+        }
+        &.door-right {
+            background-image: url(../images/j02.jpg);
+            right: 0px;
+            z-index: 9;
+            box-shadow: inset 2px 0 2px 0 #310000;
+            transform-origin: 100% 50%;
+            .lock {
+                left: -41px;
+            }
+        }
+        &.open {
+          transform: rotateY(90deg);
+        }
+    }
+}
