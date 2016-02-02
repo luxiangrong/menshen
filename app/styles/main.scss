@@ -77,8 +77,8 @@ html.full-screen {
         text-align: center;
         overflow: hidden;
         transform-style: preserve-3d;
-        perspective: 500;
-        perspective-origin: 50% 50%;
+        perspective: 100;
+        perspective-origin: 50% 60%;
         transition: transform 1s;
         .lock {
             position: absolute;
