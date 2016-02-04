@@ -24,12 +24,22 @@
 </head>
 
 <body>
+    <div class="pace pace-pack pace-active">
+        <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+    </div>
     <div id="stage" class="stage">
-        <div class="scenes active">
+        <div class="scenes scenes-1  active">
+            <img src="images/g01.gif" alt="" class="bianpao">
+            <img src="images/p63.png" srcset="images/p63@2x.png 2x" alt="" class="zhufu zhufu-right animated">
+            <img src="images/p64.png" srcset="images/p64@2x.png 2x" alt="" class="zhufu zhufu-left animated">
             <div class="img-container">
-                <img class="img-responsive eaves" src="images/p03.png" alt="">
-                <img src="images/p01.png" srcset="images/p01.png 2x" alt="" class="lantern lantern-left" />
-                <img src="images/p02.png" srcset="images/p02.png 2x" alt="" class="lantern lantern-right" />
+                <img class="img-responsive eaves" src="images/p61.png" alt="">
+                <img src="images/p01.png" srcset="images/p01@2x.png 2x" alt="" class="lantern lantern-left" />
+                <img src="images/p02.png" srcset="images/p02@2x.png 2x" alt="" class="lantern lantern-right" />
+                <img src="images/logo.png" srcset="images/logo@2x.png 2x" class="logo logo-1">
+                <img src="images/p62.png" srcset="images/p62@2x.png 2x" class="logo logo-2">
             </div>
             <div class="door door-left">
                 <img src="images/p04.png" srcset="images/p04@2x.png 2x" alt="" class="duilian">
@@ -39,6 +49,44 @@
                 <img src="images/p05.png" srcset="images/p05@2x.png 2x" alt="" class="duilian">
                 <div class="lock lock-right"></div>
             </div>
+            <div class="yao"><img src="images/p31.png" srcset="images/p31@2x.png 2x" alt=""></div>
+        </div>
+        <div class="scenes scenes-2">
+            <div class="menshen menshen-1">
+                <img src="images/p66.png" srcset="images/p66@2x.png 2x" alt="" class="ming">
+                <img src="images/p67.png" srcset="images/p67@2x.png 2x" alt="" class="shen">
+            </div>
+            <div class="menshen menshen-2">
+                <img src="images/p68.png" srcset="images/p68@2x.png 2x" alt="" class="ming">
+                <img src="images/p69.png" srcset="images/p69@2x.png 2x" alt="" class="shen">
+            </div>
+            <div class="menshen menshen-3">
+                <img src="images/p70.png" srcset="images/p70@2x.png 2x" alt="" class="ming">
+                <img src="images/p71.png" srcset="images/p71@2x.png 2x" alt="" class="shen">
+            </div>
+            <div class="menshen menshen-4">
+                <img src="images/p72.png" srcset="images/p72@2x.png 2x" alt="" class="ming">
+                <img src="images/p73.png" srcset="images/p73@2x.png 2x" alt="" class="shen">
+            </div>
+            <div class="menshen menshen-5">
+                <img src="images/p74.png" srcset="images/p74@2x.png 2x" alt="" class="ming">
+                <img src="images/p75.png" srcset="images/p75@2x.png 2x" alt="" class="shen">
+            </div>
+            <a href="" class="btn btn-share"><img src="images/p65.png" srcset="images/p65@2x.png 2x" height="43" width="165" alt=""></a>
+        </div>
+    </div>
+    <div class="share-guild">
+        <img src="images/p47.png" src="images/p47@2x.png" height="250" width="293" alt="">
+    </div>
+    <div class="copyright collapse">
+        <div class="head ">
+            <img src="images/logo.png" srcset="images/logo@2x.png 2x" alt="">
+            <a href="#" class="toggle"></a>
+        </div>
+        <div class="body">
+            <p>
+                中国民生信托2015年捷报频传：截至2015年末，公司资产管理规模超千亿，营业收入过十亿，且主动管理业务占比不断提高，主动管理水平位居行业前列!同时，在金融行业评选中相继获得：“中国最具发展潜力信托公司”、“值得托付财富管理机构”、中国证券市场2015年度优秀贡献龙鼎奖、“年度金牌信托公司”等各类殊荣。
+            </p>
         </div>
     </div>
     <!-- build:js(.) scripts/vendor.js -->
@@ -46,6 +94,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/fastclick/lib/fastclick.js"></script>
     <script src="/bower_components/buzz/dist/buzz.js"></script>
+    <script src="/bower_components/shake.js/shake.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->

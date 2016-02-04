@@ -46,78 +46,258 @@ html.full-screen {
     &.active {
         display: block;
     }
-    .img-container {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 100;
-        .eaves {
-          position: relative;
-          z-index: 30;
-        }
-        .lantern {
+    &.scenes-1 {
+        background: url(../images/j03.jpg) no-repeat center center;
+        background-size: cover;
+        .img-container {
             position: absolute;
-            z-index: 20;
-            bottom: -110px;
-            &.lantern-left {
-                left: 0px;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            text-align: center;
+            .eaves {
+                position: relative;
+                z-index: 30;
             }
-            &.lantern-right {
+            .lantern {
+                position: absolute;
+                z-index: 20;
+                bottom: -90px;
+                &.lantern-left {
+                    left: 0px;
+                }
+                &.lantern-right {
+                    right: 0px;
+                }
+            }
+            .logo {
+                position: absolute;
+                left: 50%;
+                margin-left: -61px;
+                top: 5px;
+                z-index: 31;
+                &.logo-2 {
+                    margin-left: -42.5px;
+                    top: 36px;
+                }
+            }
+        }
+        .door {
+            position: absolute;
+            background: url(../images/j01.jpg) no-repeat center top;
+            background-size: 100% auto;
+            width: 50%;
+            height: 100%;
+            top: 0px;
+            text-align: center;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 100;
+            perspective-origin: 50% 60%;
+            transition: transform 2s;
+            .lock {
+                position: absolute;
+                width: 82px;
+                height: 126px;
+                background: url(../images/p06.png) no-repeat center center;
+                background-size: cover;
+                top: 50%;
+                margin-top: -63px;
+            }
+            .duilian {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -32.5px;
+                margin-top: -142px;
+                
+            }
+            &.door-left {
+                background-image: url(../images/j01.jpg);
+                left: 0px;
+                box-shadow: inset -2px 0 2px 0 #310000;
+                z-index: 10;
+                transform-origin: 0% 50%;
+                .lock {
+                    right: -41px;
+                }
+            }
+            &.door-right {
+                background-image: url(../images/j02.jpg);
                 right: 0px;
+                z-index: 9;
+                box-shadow: inset 2px 0 2px 0 #310000;
+                transform-origin: 100% 50%;
+                .lock {
+                    left: -41px;
+                }
+            }
+        }
+        &.door-opened {
+            .zhufu {
+                animation: bounceInDown 2s, fadeIn 2s ;
+            }
+            .bianpao {
+                animation: slideInDown 1s, fadeIn 2s ;
+            }
+            .door {
+                transform: rotateY(70deg);
+            }
+        }
+        .yao {
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+            z-index: 20
+        }
+        .bianpao {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            margin-left: -50px;
+            display: block;
+        }
+        .zhufu {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            &.zhufu-left {
+                margin-left: -32px;
+            }
+            &.zhufu-right {
+                margin-left: 10px;
             }
         }
     }
-    .door {
-        position: absolute;
-        background: url(../images/j01.jpg) no-repeat center top;
-        background-size: 100% auto;
-        width: 50%;
-        height: 100%;
-        top: 0px;
-        text-align: center;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        perspective: 100;
-        perspective-origin: 50% 60%;
-        transition: transform 1s;
-        .lock {
+    &.scenes-2 {
+        background: url(../images/j04.jpg) no-repeat center center;
+        background-size: cover;
+
+        .btn-share {
             position: absolute;
-            width: 82px;
-            height: 126px;
-            background: url(../images/p06.png) no-repeat center center;
-            background-size: cover;
-            top: 50%;
-            margin-top: -63px;
-        }
-        .duilian {
-            position: absolute;
+            display: block;
+            bottom: 70px;
             left: 50%;
-            top: 50%;
-            margin-left: -32.5px;
-            margin-top: -142px;
+            margin-left: -76px;
+            padding: 0;
         }
-        &.door-left {
-            background-image: url(../images/j01.jpg);
-            left: 0px;
-            box-shadow: inset -2px 0 2px 0 #310000;
-            z-index: 10;
-            transform-origin: 0% 50%;
-            .lock {
-                right: -41px;
+        .menshen {
+            display: none;
+            .ming {
+                position: absolute;
+                left: 50%;
+                top: 30px;
+                margin-left: -114px;
+            }
+            .shen {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+            }
+            &.menshen-1 {
+
             }
         }
-        &.door-right {
-            background-image: url(../images/j02.jpg);
-            right: 0px;
-            z-index: 9;
-            box-shadow: inset 2px 0 2px 0 #310000;
-            transform-origin: 100% 50%;
-            .lock {
-                left: -41px;
+    }
+}
+
+.copyright {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    z-index: 1060;
+    transform: translate3d(0, 100%, 0);
+    font-size: 1.5rem;
+    display: none;
+    transition: all 700ms;
+    .head {
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        img {
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+    }
+    .body {
+        border-top: 1px dashed rgba(255, 255, 255, 0.3);
+        color: #c6c6c6;
+        padding: 5px 10px;
+        transition: height 0.7s;
+        text-align: left;
+        p {
+            text-indent: 2em;
+        }
+    }
+    &.collapse {
+        .toggle {
+            position: absolute;
+            width: 17px;
+            height: 14px;
+            background: url(../images/p51.png) no-repeat center center;
+            background-size: 17px 14px;
+            right: 10px;
+            top: 15px;
+        }
+        .body {
+        }
+        &.in {
+            transform: translate3d(0, 0, 0);
+            bottom: 0;
+            .body {
+                display: block;
+            }
+            .toggle {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url(../images/p52.png) no-repeat center center;
+                background-size: 16px 16px;
+                right: 10px;
+                top: 15px;
             }
         }
-        &.open {
-          transform: rotateY(90deg);
-        }
+    }
+}
+
+.share-guild {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1050;
+    text-align: center;
+    display: none;
+}
+
+.pace {
+    &.pace-pack {
+        z-index: 999;
+    }
+}
+
+
+.fade {
+    @include opacity(0);
+    transition: opacity 0.3s linear;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    &.in {
+        @include opacity(0.5);
     }
 }

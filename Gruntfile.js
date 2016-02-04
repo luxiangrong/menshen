@@ -335,6 +335,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
+            'images/{,*/}*.mp3',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
@@ -344,6 +345,9 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
           dest: '<%= config.dist %>'
+        },{
+          src: 'bower_components/PACE/pace.min.js',
+          dest: '<%= config.dist %>/scripts/vendor/pace.min.js'
         }]
       }
     },
@@ -413,9 +417,9 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'filerev',
+    // 'filerev',
     'usemin',
-    'htmlmin'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
