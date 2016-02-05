@@ -73,7 +73,7 @@ html.full-screen {
             .logo {
                 position: absolute;
                 left: 50%;
-                margin-left: -61px;
+                margin-left: -68px;
                 top: 5px;
                 z-index: 31;
                 &.logo-2 {
@@ -146,8 +146,9 @@ html.full-screen {
         }
         .yao {
             position: absolute;
+            left: 50%;
+            margin-left: -66px;
             bottom: 15px;
-            right: 10px;
             z-index: 20
         }
         .bianpao {

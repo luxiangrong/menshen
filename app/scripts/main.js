@@ -79,6 +79,7 @@ Pace.on("done", function() {
             $(".scenes-2").hide();
             $(".scenes-1").show();
             $(".copyright").fadeOut("normal");
+            $('.yao').fadeOut();
             successSound.play();
             window.setTimeout(function() {
                 $(".scenes-1").addClass("door-opened");
@@ -93,9 +94,9 @@ Pace.on("done", function() {
                         var b = parseInt(5 * Math.random() + 1);
                         $(".menshen-" + b).show();
                         $(".copyright").fadeIn("normal");
-
+                        $('.yao').fadeIn();
                     });
-                }, 3e3)
+                }, 10000)
             }, 100)
         };
 
